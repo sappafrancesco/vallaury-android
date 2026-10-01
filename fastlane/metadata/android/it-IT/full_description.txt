@@ -1,0 +1,24 @@
+Vallaury è la piattaforma scolastica dell'istituto Vallauri di Fossano: orario, compiti, verifiche e appunti in un unico posto. Questa app la apre a tutto schermo su telefono e tablet, con le notifiche e le scorciatoie nel launcher.
+
+<b>Cosa puoi fare</b>
+<ul>
+<li>Vedere l'orario in tempo reale: la lezione in corso, la prossima e le aule libere. Ricevi una e-mail quando l'orario cambia.</li>
+<li>Tenere compiti e verifiche della tua classe in un calendario.</li>
+<li>Scrivere appunti con formule (LaTeX), codice, tabelle e liste di controllo.</li>
+<li>Usare la pagina a penna: una lavagna senza limiti per scrivere a mano, disegnare schemi e diagrammi.</li>
+<li>Leggere gli appunti che i compagni condividono nella bacheca di classe.</li>
+<li>Andare subito a un appunto veloce, all'orario di oggi, ai compiti o alle verifiche dalle scorciatoie del launcher, oppure condividere un testo da qualsiasi app in un nuovo appunto.</li>
+</ul>
+
+<b>Privacy</b>
+<ul>
+<li>Nessuna pubblicità, nessuna analisi d'uso, nessun tracker, nessun Google Play Services.</li>
+<li>Chiede un solo permesso: mostrare le notifiche. Non ha nemmeno un accesso alla rete suo: le pagine le carica il tuo browser.</li>
+<li>Non tiene dati dell'account sul dispositivo ed è escluso dai backup.</li>
+<li>Il server è gestito da una sola persona, su una macchina in Italia. Si entra con una passkey, un codice via e-mail o, se vuoi, con Google.</li>
+</ul>
+
+<b>Da sapere</b>
+Vallaury è un progetto indipendente e non è la piattaforma ufficiale di nessuna scuola. Serve un account; una demo senza account è su demo.vallaury.it. L'app è un involucro attorno ad app.vallaury.it, quindi le novità arrivano senza aggiornare l'app. Per aprirsi senza barra degli indirizzi serve un browser basato su Chromium; con qualsiasi altro browser si apre come una normale pagina. Il servizio non è software libero, per questo F-Droid segnala che l'app dipende da un servizio di rete non libero.
+
+Il codice sorgente di questa app è software libero (GPL-3.0).

@@ -1,0 +1,24 @@
+Vallaury is the school platform of the Vallauri institute in Fossano (Italy): timetable, homework, exams and notes in one place. This app opens it full screen on your phone or tablet, with notifications and launcher shortcuts.
+
+<b>What you can do</b>
+<ul>
+<li>See the timetable live: the lesson in progress, the next one and the rooms that are free. Get an e-mail when the timetable changes.</li>
+<li>Keep homework and exams for your class in a calendar.</li>
+<li>Write notes with formulas (LaTeX), code, tables and checklists.</li>
+<li>Use the pen page: an endless whiteboard for handwriting, sketches and diagrams.</li>
+<li>Read the notes your classmates share on the class board.</li>
+<li>Jump straight to a quick note, today's timetable, homework or exams from the launcher shortcuts, or share text from any app to a new note.</li>
+</ul>
+
+<b>Privacy</b>
+<ul>
+<li>The app has no ads, no analytics, no trackers and no Google Play Services.</li>
+<li>It asks for one permission only: showing notifications. It does not even have network access of its own: the pages are loaded by your browser.</li>
+<li>It keeps no account data on the device and is excluded from backups.</li>
+<li>The server is run by one person on a machine in Italy. Sign in with a passkey, an e-mail code, or optionally Google.</li>
+</ul>
+
+<b>Good to know</b>
+Vallaury is an independent project and not the official platform of any school. You need an account to use it; a demo without an account is available at demo.vallaury.it. The app is a thin shell around app.vallaury.it, so new features arrive without updating the app. It needs a Chromium-based browser to open without an address bar; with any other browser it opens as a normal page. The service itself is not free software, so F-Droid marks this app as depending on a non-free network service.
+
+The source code of this app is free software (GPL-3.0).

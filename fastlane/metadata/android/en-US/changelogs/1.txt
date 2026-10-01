@@ -1,0 +1,1 @@
+First release. The Vallaury web app as an Android app: full screen, notifications, launcher shortcuts and sharing text to a new note.

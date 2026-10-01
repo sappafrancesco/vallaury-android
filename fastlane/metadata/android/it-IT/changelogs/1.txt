@@ -1,0 +1,1 @@
+Prima versione. La web app di Vallaury come app Android: a tutto schermo, con notifiche, scorciatoie nel launcher e condivisione di testo in un nuovo appunto.
