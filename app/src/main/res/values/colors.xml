@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#247A64</color>
+    <color name="colorPrimaryDark">#247A64</color>
+    <color name="navigationColor">#FAF4EC</color>
+    <color name="navigationColorDark">#11201B</color>
+    <color name="navigationDividerColor">#FAF4EC</color>
+    <color name="navigationDividerColorDark">#11201B</color>
+    <color name="backgroundColor">#FAF4EC</color>
+    <color name="shortcut_background">#F5F5F5</color>
+</resources>

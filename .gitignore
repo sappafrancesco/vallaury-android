@@ -1,0 +1,18 @@
+# Build output and Gradle caches
+/build/
+/app/build/
+/.gradle/
+/.kotlin/
+*.apk
+*.aab
+*.idsig
+
+# Local machine settings and anything that signs
+local.properties
+*.jks
+*.keystore
+keystore.properties
+signing.properties
+.idea/
+*.iml
+.DS_Store

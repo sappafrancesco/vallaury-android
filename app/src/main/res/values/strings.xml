@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="appName">Vallaury</string>
+    <string name="launcherName">Vallaury</string>
+
+    <!-- The site the app opens, and the pages the launcher shortcuts and the share sheet go to. -->
+    <string name="hostName">app.vallaury.it</string>
+    <string name="launchUrl">https://app.vallaury.it/</string>
+    <string name="webManifestUrl">https://app.vallaury.it/manifest.webmanifest</string>
+    <string name="fullScopeUrl">https://app.vallaury.it/</string>
+    <string name="shareTarget">{\"action\":\"/notes/capture\",\"method\":\"GET\",\"params\":{\"title\":\"title\",\"text\":\"text\",\"url\":\"url\"}}</string>
+
+    <string name="providerAuthority">it.vallaury.app.fileprovider</string>
+    <string name="generatorApp">bubblewrap-cli</string>
+
+    <!-- What happens when no installed browser can run a Trusted Web Activity: open a Custom Tab. -->
+    <string name="fallbackType">customtabs</string>
+    <string name="orientation">default</string>
+
+    <string name="shortcut_name_0">Nuovo appunto veloce</string>
+    <string name="shortcut_short_name_0">Appunto</string>
+    <string name="shortcut_name_1">Orario di oggi</string>
+    <string name="shortcut_short_name_1">Orario</string>
+    <string name="shortcut_name_2">Compiti</string>
+    <string name="shortcut_short_name_2">Compiti</string>
+    <string name="shortcut_name_3">Verifiche</string>
+    <string name="shortcut_short_name_3">Verifiche</string>
+
+    <!-- Tells Android which site this app is allowed to open without a browser bar (see also assetlinks.json on the site). -->
+    <string name="assetStatements">[{\"relation\": [\"delegate_permission/common.handle_all_urls\"], \"target\": {\"namespace\": \"web\", \"site\": \"https://app.vallaury.it\"}}]</string>
+</resources>
