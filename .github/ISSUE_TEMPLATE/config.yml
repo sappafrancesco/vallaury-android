@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Problem with the Vallaury service itself (login, timetable, notes)
+    url: https://app.vallaury.it
+    about: This tracker is for the Android app only. Use the feedback button inside the web app for the service.

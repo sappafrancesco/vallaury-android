@@ -1,0 +1,28 @@
+name: Bug in the Android app
+description: Something in the app (not the website) does not work
+body:
+  - type: input
+    id: device
+    attributes:
+      label: Device and Android version
+      placeholder: Pixel 7, GrapheneOS 2026..., Android 15
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Default browser and its version
+      placeholder: Vanadium 140, Firefox 14x, Chrome ...
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Where did you install the app from?
+      placeholder: F-Droid, built from source, other
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
