@@ -33,4 +33,6 @@ git diff gradle/verification-metadata.xml
 1. Raise `versionCode` and `versionName` in `app/build.gradle`.
 2. Add a file `fastlane/metadata/android/<locale>/changelogs/<versionCode>.txt` (500 bytes at most) and a section in
    `CHANGELOG.md`.
-3. Commit, then tag `v<versionName>` and push the tag. F-Droid picks the new tag up by itself.
+3. Commit, then tag `v<versionName>` and push the tag.
+4. Build and sign with `scripts/sign-release.sh`, and attach the APK to the GitHub release as `vallaury-<versionName>.apk`.
+   F-Droid downloads it from there, builds the same version from source and checks that the two match.

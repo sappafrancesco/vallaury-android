@@ -65,10 +65,11 @@ $ANDROID_HOME/build-tools/<versione>/aapt2 dump permissions app/build/outputs/ap
 
 - **F-Droid:** la richiesta è pronta in [`fdroid/`](fdroid/). Non è ancora nell'indice di F-Droid; questa riga avrà il
   collegamento quando ci sarà.
+- **Release di GitHub:** l'APK firmato di ogni versione.
 - **Dai sorgenti:** vedi [Compilazione](#compilazione). L'APK che ottieni non è firmato: firmalo con la tua chiave.
 
-Un APK di F-Droid è firmato da F-Droid, uno di Google Play da Google, una tua compilazione da te. Android non permette di
-installarne uno sopra l'altro: prima disinstalla. L'app non tiene dati, quindi non perdi nulla.
+L'APK di F-Droid e quello nelle [release di GitHub](https://github.com/sappafrancesco/vallaury-android/releases) sono lo
+stesso file, firmato con la chiave del progetto (SHA-256 del certificato `C4:A8:91:E0:6C:1C:79:8F:BA:D8:F5:F2:D6:D9:EF:9B:47:A3:06:6D:EE:14:10:A7:9B:B0:17:80:9B:E9:6C:E7`). Un APK di Google Play è firmato da Google e una tua compilazione da te. Android non permette di installarne uno sopra l'altro con una chiave diversa: prima disinstalla. L'app non tiene dati, quindi non perdi nulla.
 
 ## Come apre il sito
 
@@ -83,8 +84,8 @@ browser gestisce le notifiche web.
 ### Digital Asset Links e chiave di firma
 
 Per la modalità a tutto schermo, `https://app.vallaury.it/.well-known/assetlinks.json` deve elencare l'impronta SHA-256
-della chiave con cui è firmato l'APK installato. Ogni canale di distribuzione ha la sua chiave, quindi ogni impronta è in
-quell'elenco. Per leggere l'impronta di un APK:
+della chiave con cui è firmato l'APK installato. Ogni chiave di firma ha la sua impronta in quell'elenco (quella del
+progetto e quella usata da Google Play). Per leggere l'impronta di un APK:
 
 ```sh
 $ANDROID_HOME/build-tools/<versione>/apksigner verify --print-certs app-release.apk
@@ -110,7 +111,7 @@ Per chi vuole sapere cosa esegue:
 - Il blocco firmato di metadati delle dipendenze che il plugin Android aggiunge agli APK è disattivato, come le
   informazioni sul controllo di versione. Due compilazioni pulite con gli stessi strumenti danno un APK non firmato
   identico byte per byte.
-- Per pubblicare una tua compilazione, firmala con `apksigner`. Nel repository non c'è, e non ci sarà mai, nessuna chiave
+- Per pubblicare una tua compilazione, firmala con `scripts/sign-release.sh` (usa `apksigner`). Nel repository non c'è, e non ci sarà mai, nessuna chiave
   di firma né password.
 
 Per cambiare il sito aperto dall'app, le scorciatoie o i colori, modifica
@@ -124,6 +125,7 @@ app/                         il modulo Android (manifest, risorse, due classi mi
 fastlane/metadata/android/   testi, icona e schermate per F-Droid (en-US, it-IT)
 fdroid/                      la ricetta per F-Droid e come si presenta
 gradle/                      wrapper e checksum delle dipendenze
+scripts/                     sign-release.sh, firma una build in modo che F-Droid possa riprodurla
 LICENSES/                    testi delle altre licenze usate
 PRIVACY.md                   cosa fanno l'app e il servizio con i tuoi dati
 SECURITY.md                  come segnalare una vulnerabilità

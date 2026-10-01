@@ -66,10 +66,11 @@ $ANDROID_HOME/build-tools/<version>/aapt2 dump permissions app/build/outputs/apk
 
 - **F-Droid:** a submission is prepared in [`fdroid/`](fdroid/). It is not in the F-Droid index yet; this line will
   link to it when it is.
+- **GitHub releases:** the signed APK of every version.
 - **From source:** see [Build](#build). The APK you get is unsigned; sign it with your own key.
 
-An APK installed from F-Droid is signed by F-Droid, one installed from Google Play by Google, and your own build by you.
-Android will not install one over another: uninstall first. The app keeps no data, so nothing is lost.
+The APK from F-Droid and the one on the [GitHub releases](https://github.com/sappafrancesco/vallaury-android/releases)
+are the same file, signed with the project key (certificate SHA-256 `C4:A8:91:E0:6C:1C:79:8F:BA:D8:F5:F2:D6:D9:EF:9B:47:A3:06:6D:EE:14:10:A7:9B:B0:17:80:9B:E9:6C:E7`). An APK from Google Play is signed by Google and your own build by you. Android will not install one over another with a different key: uninstall first. The app keeps no data, so nothing is lost.
 
 ## How it opens the website
 
@@ -84,8 +85,8 @@ with web push.
 ### Digital Asset Links and the signing key
 
 For the full screen mode, `https://app.vallaury.it/.well-known/assetlinks.json` must list the SHA-256 fingerprint of the
-key that signed the installed APK. Each distribution channel has its own key, so each fingerprint is listed there. To read
-the fingerprint of an APK:
+key that signed the installed APK. Each signing key has its fingerprint listed there (the project key, and the one Google
+Play uses). To read the fingerprint of an APK:
 
 ```sh
 $ANDROID_HOME/build-tools/<version>/apksigner verify --print-certs app-release.apk
@@ -110,7 +111,7 @@ Notes for people who care about what they run:
   plugins included.
 - The signed dependency metadata block that Android Gradle Plugin adds to APKs is switched off, as is the version control
   info. Two clean builds on the same toolchain give a byte-identical unsigned APK.
-- To publish your own build, sign it with `apksigner`. No signing key or password is, or will ever be, in this repository.
+- To publish your own build, sign it with `scripts/sign-release.sh` (`apksigner` underneath). No signing key or password is, or will ever be, in this repository.
 
 To change the website the app opens, the shortcuts or the colours, edit
 [`app/src/main/res/values/strings.xml`](app/src/main/res/values/strings.xml) and
@@ -123,6 +124,7 @@ app/                         the Android module (manifest, resources, two tiny c
 fastlane/metadata/android/   store texts, icon and screenshots read by F-Droid (en-US, it-IT)
 fdroid/                      the F-Droid recipe and how it is submitted
 gradle/                      wrapper and dependency checksums
+scripts/                     sign-release.sh, signs a build so F-Droid can reproduce it
 LICENSES/                    texts of the other licenses used here
 PRIVACY.md                   what the app and the service do with your data
 SECURITY.md                  how to report a vulnerability
